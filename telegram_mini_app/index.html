@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telegram Mini App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Coin Wallet</h1>
+            <div id="user-info"></div>
+        </header>
+        
+        <div class="card">
+            <h2>Your Balance</h2>
+            <div class="balance" id="balance">0.00</div>
+            <div class="actions">
+                <button class="btn-primary" onclick="deposit()">Deposit</button>
+                <button class="btn-secondary" onclick="withdraw()">Withdraw</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Referral Program</h2>
+            <p>Invite friends and earn rewards!</p>
+            <div class="referral-link">
+                <input type="text" id="referral-link" readonly>
+                <button class="btn-small" onclick="copyReferralLink()">Copy</button>
+            </div>
+            <p id="referral-count">You have referred 0 friends</p>
+        </div>
+        
+        <div class="card">
+            <h2>Daily Bonus</h2>
+            <p>Claim your daily bonus of 10 coins!</p>
+            <button class="btn-primary" id="daily-bonus-btn" onclick="claimDailyBonus()">Claim Bonus</button>
+        </div>
+        
+        <div class="card">
+            <h2>Transaction History</h2>
+            <div id="transaction-list">
+                <p>No transactions yet</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
